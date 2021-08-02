@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: Instalando pacotes
+      apt:
+        name: [
+          "curl",
+          "git",
+          "strace",
+          "jq"
+        ]
+        state: present
+  become: yes
